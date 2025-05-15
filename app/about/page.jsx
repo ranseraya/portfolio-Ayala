@@ -5,7 +5,7 @@ import PersonalInterest from '@/components/personal-interest';
 import TypingEffect from '@/components/typing-effect'
 import Image from 'next/image';
 import React from 'react'
-
+import fotoAbout from '@/assets/foto-about.png';
 
 export const metadata = {
     title: "About Ayala | Front-End Developer & Cybersecurity Enthusiast",
@@ -31,7 +31,7 @@ export default function Page() {
                                 ]}
                             />
                         </span>
-                        <ul className="flex gap-4 text-xs sm:text-lg space-y-2">
+                        <ul className="flex flex-wrap justify-center gap-4 text-xs sm:text-lg space-y-2">
                             <li><a href="" className="flex items-center gap-2">
                                 <Image src={"/icons/mails.svg"} alt="" height={20} width={20} />ayalarahanda0@gmail.com
                             </a></li>
@@ -50,37 +50,28 @@ export default function Page() {
                     <div className="w-full space-y-6 text-left pt-10">
                         <div>
                             <h2 className="text-2xl font-semibold">Personal Introduction</h2>
-                            <div className='flex mt-5 gap-10'>
-                                <Image src={'/foto-about.png'} alt='foto-about' height={0} width={200} className='h-auto'/>
-                                <div>
-                                    <p className="text-muted-foreground mt-1 text-lg">
+                            <div className='flex sm:flex-row flex-col w-full justify-center items-center mt-5 gap-10'>
+                                <div className='relative bg-white h-60 w-2/3 sm:w-1/4'>
+                                    <Image src={'/foto-about.png'} alt='foto-about' fill className='object-cover'/>
+                                </div>
+                                <div className='w-full sm:w-9/12'>
+                                    <p className="text-muted-foreground mt-1 text-md sm:text-lg text-justify indent-6">
                                         I'm Ayala Septama Rahanda, passionate about building clean and user-friendly web interfaces, while actively exploring the world of cybersecurity. I love working in collaborative environments and continuously growing through hands-on projects.
                                     </p>
-                                    <p className="text-muted-foreground mt-1 text-lg">
+                                    <p className="text-muted-foreground mt-1 text-md sm:text-lg text-justify indent-6">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus dolor repudiandae voluptate atque quidem aliquam rem ratione earum quia dolore expedita blanditiis, nihil accusamus.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <ExperienceSection />
-                        </div>
-
-                        <div>
-                            <EducationSection />
-                        </div>
-
-                        <div>
-                            <CareerGoals />
-                        </div>
-                        <div>
-                            <PersonalInterest />
-                        </div>
+                        <CareerGoals />
+                        <ExperienceSection />
+                        <EducationSection />
+                        <PersonalInterest />
                     </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
         </main >
     )
 }

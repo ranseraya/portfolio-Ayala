@@ -38,29 +38,32 @@ const ExperienceSection = () => {
     ];
 
     return (
-        <section className="py-10 px-5 flex flex-col items-center w-full">
-            <h2 className="text-3xl font-bold mb-10 text-green-400">Education</h2>
+        <section className="py-10 px-0 sm:px-5 flex flex-col items-center w-full">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-green-400">Experience</h2>
             <div className="ml-6 space-y-10">
                 {experiences.map((exp, index) => (
-                    <div key={index} className="flex items-start gap-6">
+                    <div key={index} className="flex items-start justify-between gap-0 sm:gap-6">
                         <div className='relative flex'>
-                            <div className='absolute w-1 h-50 bg-gray-800 '></div>
-                            <div className="absolute -left-9.5 w-20 h-20 bg-black border-4 overflow-hidden border-green-500 rounded-full flex justify-center items-center">
+                            <div className='absolute w-1 h-70 sm:h-50 bg-gray-800 '></div>
+                            <div className="absolute -left-6.5 -top-8.5 sm:top-0 sm:-left-9.5 w-15 sm:w-20 h-15 sm:h-20 bg-black border-4 border-green-500 rounded-full flex overflow-hidden justify-center items-center">
                                 <Image src={exp.logo} width={80} height={80} alt="logo" className="object-contain" />
                             </div>
                         </div>
-                        <div className="ml-15 bg-zinc-900 text-white p-5 rounded-xl w-full shadow-md">
-                            <div className="flex justify-between items-center mb-2">
-                                <h3 className="text-lg font-bold">
+                        <div className="ml-0 sm:ml-15 bg-zinc-900 text-white p-5 rounded-xl w-full shadow-md">
+                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center mb-2">
+                                <h3 className="text-sm sm:text-lg font-bold">
                                     {exp.title.split(" ").slice(0, -1).join(" ")}{" "}
                                     <span className="text-green-400">{exp.title.split(" ").slice(-1)}</span>
                                 </h3>
-                                <span className="bg-zinc-800 text-xs px-3 py-1 rounded-full">
+                                <span className="bg-zinc-800  text-[10px] sm:text-xs px-3 py-1 rounded-full">
                                     {exp.date}
                                 </span>
                             </div>
-                            <p className="text-sm text-gray-300 mb-2">
-                                <span className="text-green-400 font-semibold">{exp.institution}</span><br />
+                            <p className="text-xs sm:text-sm text-justify text-gray-300 mb-2">
+                                <span className="text-green-400 font-semibold">
+                                    <span className='text-white linier sm:hidden'>Institution </span>
+                                    {exp.institution}
+                                    </span><br />
                                 {exp.desc}
                             </p>
                             {exp.tech.length > 0 && (

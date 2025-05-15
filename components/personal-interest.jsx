@@ -35,8 +35,8 @@ const lists = [
 
 export default function PersonalInterest(){
   return (
-    <section className="px-5 py-10">
-      <h2 className="text-3xl font-bold text-green-400 mb-6">Personal Interest 🚀</h2>
+    <section className="px-0 sm:px-5 py-10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-green-400 mb-6">Personal Interest 🚀</h2>
       <div className="grid sm:grid-cols-2 gap-6">
         {lists.map((goal, i) => (
           <div
