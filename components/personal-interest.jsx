@@ -2,9 +2,9 @@ import { Code2, Briefcase, Rocket, ShieldIcon, GitPullRequest } from "lucide-rea
 
 const lists = [
   {
-    title: "CTF",
-    desc: "Main CTF",
-    icon: <Code2 className="w-6 h-6 text-green-400" />,
+    title: "Badminton",
+    desc: "Main Badminton",
+    icon: <Rocket className="w-6 h-6 text-green-400" />,
   },
   {
     title: "Chess",
@@ -12,18 +12,23 @@ const lists = [
     icon: <ShieldIcon className="w-6 h-6 text-green-400" />,
   },
   {
+    title: "CTF",
+    desc: "Main CTF",
+    icon: <Code2 className="w-6 h-6 text-green-400" />,
+  },
+  {
     title: "Contribute to Open Source",
     desc: "Collaborate with developer communities and publish useful tools.",
     icon: <GitPullRequest className="w-6 h-6 text-green-400" />,
   },
   {
-    title: "Badminton",
-    desc: "Main Badminton",
+    title: "Language enthusiast",
+    desc: "...",
     icon: <Rocket className="w-6 h-6 text-green-400" />,
   },
   {
-    title: "Ngaji",
-    desc: "Ngaji dunia",
+    title: "Geografy/geoinformatic",
+    desc: "...",
     icon: <Rocket className="w-6 h-6 text-green-400" />,
   },
   {

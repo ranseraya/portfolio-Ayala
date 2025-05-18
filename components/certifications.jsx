@@ -66,7 +66,7 @@ export default function Cerfifications() {
                 <CarouselContent>
                     {Array.from({ length: 10 }).map((_, index) => (
                         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis-1/1">
-                            <Card>
+                            <Card className="glassmorph">
                                 <CardContent className="relative flex flex-col aspect-video items-center justify-center p-6">
                                     <h3 className="absolute -top-2 right-10 bg-indigo-500 px-2 py-0/5 rounded-2xl">{certList[0].date}</h3>
                                     <h1 className="text-center text-xl sm:text-3xl text-bold ">{certList[0].title}</h1>

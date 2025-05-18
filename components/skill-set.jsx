@@ -91,7 +91,7 @@ export default function SkillSet() {
                 <CarouselContent>
                     {certList.map((skillSet, index) => (
                         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis-1/1">
-                            <Card>
+                            <Card className="glassmorph">
                                 <CardContent className="flex flex-col aspect-video items-start justify-baseline px-6 gap-4">
                                     <div className="bg-neutral-900 border-6 border-neutral-600 p-3 rounded-full">
                                         <Image src={skillSet.logo} width={30} height={30} alt={skillSet.title} />
@@ -104,8 +104,8 @@ export default function SkillSet() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className={"-left-9"}/>
+                <CarouselNext className={"-right-9"}/>
             </Carousel>
             <div className="flex justify-center gap-2 mt-4">
                 {Array.from({ length: count }).map((_, index) => (

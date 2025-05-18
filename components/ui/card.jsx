@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { ArrowRightIcon } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 function Card({
@@ -90,6 +90,26 @@ function CardFooter({
   );
 }
 
+function CardArticle({ title, description, date, tags, url }) {
+  return (
+    <article className="rounded-xl bg-[#1f1f1f] hover:bg-[#2a2a2a] transition p-4 shadow-md">
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="text-sm text-gray-400 mt-1">{description}</p>
+      <div className="mt-5 flex gap-2 text-sm text-gray-500">
+        {tags.map((tag, index) => {
+          return (
+            <span key={index}>#{tag}</span>
+          )
+        })}
+      </div>
+      <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
+        <a href={url} className="text-xl text-white font-bold flex justify-center items-center gap-2 hover:text-blue-400 transition group">Read More <ArrowRightIcon className="group-hover:translate-x-2 transition" width={25} height={25} /></a>
+        <span>{date}</span>
+      </div>
+    </article>
+  )
+}
+
 export {
   Card,
   CardHeader,
@@ -98,4 +118,5 @@ export {
   CardAction,
   CardDescription,
   CardContent,
+  CardArticle,
 }

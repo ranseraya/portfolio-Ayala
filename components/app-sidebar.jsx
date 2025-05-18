@@ -88,13 +88,13 @@ const data = {
     },
     {
       title: "Blog",
-      url: "#",
+      url: "/blog",
       icon: Settings2,
 
     },
     {
       title: "Tools & Skills",
-      url: "skills",
+      url: "/skills",
       icon: Settings2,
     },
     {

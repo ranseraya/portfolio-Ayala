@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function CircularProgress({ percentage, size = 50, strokeWidth = 4, color = '#4ade80', logo }) {
+export default function CircularProgress({ percentage, size = 60, strokeWidth = 6, color = '#4ade80', logo }) {
     const radius = (size - strokeWidth) / 2;
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - (percentage / 100) * circumference;
