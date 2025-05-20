@@ -103,7 +103,7 @@ function CardArticle({ title, description, date, tags, url }) {
         })}
       </div>
       <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
-        <a href={url} className="text-xl text-white font-bold flex justify-center items-center gap-2 hover:text-blue-400 transition group">Read More <ArrowRightIcon className="group-hover:translate-x-2 transition" width={25} height={25} /></a>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="text-xl text-white font-bold flex justify-center items-center gap-2 hover:text-blue-400 transition group">Read More <ArrowRightIcon className="group-hover:translate-x-2 transition" width={25} height={25} /></a>
         <span>{date}</span>
       </div>
     </article>

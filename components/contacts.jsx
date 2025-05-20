@@ -4,32 +4,32 @@ const lists = [
     {
         title: "What's App",
         desc: "+62 857 3017 xxxx",
-        icon: <Rocket width={40} height={40} className="text-green-400" />,
+        icon: <Rocket width={20} height={20} className="text-green-400" />,
     },
     {
         title: "Email",
         desc: "ayalarahanda0@gmail.com",
-        icon: <Code2 width={40} height={40} className="text-green-400" />,
+        icon: <Code2 width={20} height={20} className="text-green-400" />,
     },
     {
         title: "LinkedIn",
         desc: "@ranseraya",
-        icon: <Briefcase width={40} height={40} className="text-green-400" />,
+        icon: <Briefcase width={20} height={20} className="text-green-400" />,
     },
     {
         title: "Instagram",
         desc: "@ranseraya",
-        icon: <ShieldIcon width={40} height={40} className="text-green-400" />,
+        icon: <ShieldIcon width={20} height={20} className="text-green-400" />,
     },
     {
         title: "Github",
         desc: "@ranseraya",
-        icon: <GitPullRequest width={40} height={40} className="text-green-400" />,
+        icon: <GitPullRequest width={20} height={20} className="text-green-400" />,
     },
     {
         title: "Youtube",
         desc: "@ranseraya",
-        icon: <Rocket width={40} height={40} className="text-green-400" />,
+        icon: <Rocket width={20} height={20} className="text-green-400" />,
     },
 ];
 
@@ -41,15 +41,13 @@ export default function Contacts() {
                 {lists.map((goal, i) => (
                     <div
                         key={i}
-                        className="bg-zinc-900 p-5 rounded-xl shadow hover:shadow-lg transition duration-300"
+                        className="flex w-full items-center justify-baseline gap-4 mb-2 bg-zinc-900 p-5 rounded-xl shadow hover:shadow-lg transition duration-300"
                     >
-                        <div className="flex items-center justify-baseline gap-4 mb-2">
                             <div className="p-5 bg-zinc-800 rounded-full">{goal.icon}</div>
                             <div className="flex flex-col justify-center">
-                                <h3 className="text-lg font-semibold">{goal.title}</h3>
-                                <h3 className="text-lg font-semibold">{goal.desc}</h3>
+                                <h3 className="text-sm sm:text-lg font-semibold">{goal.title}</h3>
+                                <h3 className="text-sm sm:text-lg font-semibold">{goal.desc}</h3>
                             </div>
-                        </div>
                     </div>
                 ))}
             </div>

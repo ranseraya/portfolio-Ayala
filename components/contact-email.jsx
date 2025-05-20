@@ -39,9 +39,9 @@ const Contact = () => {
             </p>
 
             <form
-                onSubmit={onSubmit} className="w-2/3 mx-auto">
-                <div className="flex justify-between gap-6 mt-5 mb-8 text-sm sm:text-base">
-                    <div className="flex-1 py-0.5 pr-0.5 flex items-center rounded-md bg-zinc-400 group focus-within:bg-green-300 transition-colors ">
+                onSubmit={onSubmit} className="w-full sm:w-2/3 mx-auto">
+                <div className="flex flex-col sm:flex-row justify-between gap-6 mt-5 mb-8 text-sm sm:text-base">
+                    <div className="flex-1 py-0.5 pr-0.5 flex items-center rounded-md bg-zinc-400 group focus-within:bg-green-300 transition-colors">
                         <div className="flex px-4 items-center h-full rounded-s-md dark:bg-darkHover/30 group-focus-within:bg-green-300 transition-colors">
                             <SignatureIcon height={30} width={30} className="text-white group-focus-within:text-black transition-colors" />
                         </div>
@@ -49,7 +49,7 @@ const Contact = () => {
                             type="text"
                             placeholder="Enter your name"
                             required
-                            className="flex-1 py-4.5 px-3 rounded-e-md outline-none bg-zinc-900 text-gray-300 focus:text-green-300"
+                            className="flex-1 w-full py-4.5 px-3 rounded-e-md outline-none bg-zinc-900 text-gray-300 focus:text-green-300"
                             name="name"
                         />
                     </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                         </div>
                         <input
                             type="email" placeholder="Enter your email" required
-                            className="flex-1 py-4.5 px-3 rounded-e-md outline-none bg-zinc-900 text-gray-300 focus:text-green-300"
+                            className="flex-1 w-full py-4.5 px-3 rounded-e-md outline-none bg-zinc-900 text-gray-300 focus:text-green-300"
                             name="email"
                         />
 
