@@ -71,16 +71,30 @@ const data = {
       title: "Certifications",
       url: "/certifications",
       icon: Settings2,
+      // items: [
+      //   {
+      //     title: 'Certifications',
+      //     url: '/certifications#cert'
+      //   },
+      //   {
+      //     title: 'Achievements',
+      //     url: '/certifications#cert'
+      //   },
+      //   {
+      //     title: 'Badge',
+      //     url: '/certifications#cert'
+      //   },
+      // ]
     },
     {
       title: "Blog",
-      url: "#",
+      url: "/blog",
       icon: Settings2,
 
     },
     {
       title: "Tools & Skills",
-      url: "skills",
+      url: "/skills",
       icon: Settings2,
     },
     {
