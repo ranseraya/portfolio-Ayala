@@ -43,91 +43,148 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* --- Light Mode (opsional) --- */
+/* Jika Anda tetap ingin light mode, pertimbangkan warna yang lebih terang
+   tapi masih dengan nuansa "techy" yang bersih. */
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.147 0.004 49.25);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.147 0.004 49.25);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.147 0.004 49.25);
-  --primary: oklch(0.216 0.006 56.043);
-  --primary-foreground: oklch(0.985 0.001 106.423);
-  --secondary: oklch(0.97 0.001 106.424);
-  --secondary-foreground: oklch(0.216 0.006 56.043);
-  --muted: oklch(0.97 0.001 106.424);
-  --muted-foreground: oklch(0.553 0.013 58.071);
-  --accent: oklch(0.97 0.001 106.424);
-  --accent-foreground: oklch(0.216 0.006 56.043);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.923 0.003 48.717);
-  --input: oklch(0.923 0.003 48.717);
-  --ring: oklch(0.709 0.01 56.259);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0.001 106.423);
-  --sidebar-foreground: oklch(0.147 0.004 49.25);
-  --sidebar-primary: oklch(0.216 0.006 56.043);
-  --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-accent: oklch(0.97 0.001 106.424);
-  --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
-  --sidebar-border: oklch(0.923 0.003 48.717);
-  --sidebar-ring: oklch(0.709 0.01 56.259);
+  --background: #F0F5F9;
+  --foreground: #2C3E50;
+  --card: #FFFFFF;
+  --card-foreground: #2C3E50;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C3E50;
+  --primary: #00A65A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E0E6EB;
+  --secondary-foreground: #2C3E50;
+  --muted: #E0E6EB;
+  --muted-foreground: #7F8C8D;
+  --accent: #E0E6EB;
+  --accent-foreground: #00A65A;
+  --destructive: #E74C3C;
+  --border: #D1D8DD;
+  --input: #D1D8DD;
+  --ring: #00A65A;
+  --chart-1: #00A65A;
+  --chart-2: #3498DB;
+  --chart-3: #F39C12;
+  --chart-4: #8E44AD;
+  --chart-5: #1ABC9C;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C3E50;
+  --sidebar-primary: #00A65A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E0E6EB;
+  --sidebar-accent-foreground: #2C3E50;
+  --sidebar-border: #D1D8DD;
+  --sidebar-ring: #00A65A;
 }
 
 .dark {
-  --background: oklch(0.147 0.004 49.25);
-  --foreground: oklch(0.985 0.001 106.423);
-  --card: oklch(0.216 0.006 56.043);
-  --card-foreground: oklch(0.985 0.001 106.423);
-  --popover: oklch(0.216 0.006 56.043);
-  --popover-foreground: oklch(0.985 0.001 106.423);
-  --primary: oklch(0.923 0.003 48.717);
-  --primary-foreground: oklch(0.216 0.006 56.043);
-  --secondary: oklch(0.268 0.007 34.298);
-  --secondary-foreground: oklch(0.985 0.001 106.423);
-  --muted: oklch(0.268 0.007 34.298);
-  --muted-foreground: oklch(0.709 0.01 56.259);
-  --accent: oklch(0.268 0.007 34.298);
-  --accent-foreground: oklch(0.985 0.001 106.423);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.553 0.013 58.071);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.216 0.006 56.043);
-  --sidebar-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-accent: oklch(0.268 0.007 34.298);
-  --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.553 0.013 58.071);
+  --background: #0A0A0A;
+  --foreground: #E0E0E0;
+  --card: #1A1A1A;
+  --card-foreground: #E0E0E0;
+  --popover: #1A1A1A;
+  --popover-foreground: #E0E0E0;
+  --primary: #00FF00;
+  --primary-foreground: #0A0A0A;
+  --secondary: #2C2C2C;
+  --secondary-foreground: #E0E0E0;
+  --muted: #2C2C2C;
+  --muted-foreground: #888888;
+  --accent: #00BFFF;
+  --accent-foreground: #E0E0E0;
+  --destructive: #FF3333;
+  --border: #3A3A3A;
+  --input: #3A3A3A;
+  --ring: #00FF00;
+  --chart-1: #00FF00;
+  --chart-2: #00BFFF;
+  --chart-3: #FFD700;
+  --chart-4: #FF3333;
+  --chart-5: #8A2BE2;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #E0E0E0;
+  --sidebar-primary: #00FF00;
+  --sidebar-primary-foreground: #0A0A0A;
+  --sidebar-accent: #2C2C2C;
+  --sidebar-accent-foreground: #E0E0E0;
+  --sidebar-border: #3A3A3A;
+  --sidebar-ring: #00FF00;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
-    font-family: "Inter";
+    background-color: black;
+    font-family: var(--font-space-mono), monospace, sans-serif;
+    /* position: relative;
+    background: url('/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white; */
   }
 }
-.orbitron{
+
+.orbitron {
   font-family: var(--font-cyber);
+  font-weight: 600;
 }
+
+.spaceGrotesk {
+  font-family: var(--font-space-grotesk);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* .glassmorph {
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  z-index: 999;
+} */
+
+.glassmorph {
+  background: rgba(26, 26, 26, 0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.15),
+    0 0 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  z-index: 999;
+}
+
+.glassmorph-g {
+  /*Green*/
+  /* background: rgba(10, 10, 10, 0.4); */
+  background-image: linear-gradient(to top right, rgba(16, 185, 129, 0.35), transparent);
+  box-shadow: 0 5px 10px rgba(0, 255, 0, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(0, 255, 0, 0.4);
+  z-index: 999;
+}
+
+.main-contect{
+  /* background-color: var(--background);
+  background-image: url('/background3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1; */
 }

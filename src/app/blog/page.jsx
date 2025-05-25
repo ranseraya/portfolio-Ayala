@@ -1,13 +1,6 @@
-import Achievements from '@/components/achievements';
-import Cerfifications from '@/components/certifications';
-import TypingEffect from '@/components/typing-effect';
-import Image from 'next/image';
-import React from 'react'
-
-export const metadata = {
-    title: "About Ayala | Front-End Developer & Cybersecurity Enthusiast",
-    description: "Profil Ayala Septama Rahanda, seorang pengembang front-end dan antusias di bidang keamanan siber.",
-};
+import RecomendationArticle from "@/components/article-recomendation";
+import ArticleContainer from "@/components/articles";
+import TypingEffect from "@/components/typing-effect";
 
 export default function Page() {
     return (
@@ -30,13 +23,12 @@ export default function Page() {
                         </span>
                     </div>
 
-                    <div className='w-full gap-10 my-5 flex flex-col justify-center'>
-                        <Cerfifications />
-                        <Achievements />
+                    <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-12 gap-12">
+                        <ArticleContainer />
+                        <RecomendationArticle />
                     </div>
-                    
                 </div>
             </section>
-        </main >
+        </main>
     )
 }

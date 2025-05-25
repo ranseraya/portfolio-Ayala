@@ -2,12 +2,18 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
+  Monitor,
+  User,
+  FolderCodeIcon,
+  AwardIcon,
+  FilePenLineIcon,
+  WrenchIcon,
+  MailsIcon,
+  LogOutIcon,
   BookOpen,
   Bot,
   Command,
   Frame,
-  GalleryVerticalEnd,
   Map,
   PieChart,
   Settings2,
@@ -31,7 +37,7 @@ const data = {
   user: {
     name: "Ayala Septama Rahanda",
     email: "ayalarahanda0@gmail.com",
-    role: "Administrator",
+    role: "Web Developer",
     avatar: "/",
     image: '/profile2.jpg',
   },
@@ -39,23 +45,23 @@ const data = {
     {
       title: "Dashboard",
       url: "/dashboard",
-      icon: SquareTerminal,
+      icon: Monitor,
       isActive: true,
     },
     {
       title: "About",
       url: "/about",
-      icon: Bot,
+      icon: User,
     },
     {
       title: "Projects",
       url: "/projects",
-      icon: BookOpen,
+      icon: FolderCodeIcon,
     },
     {
       title: "Certifications",
       url: "/certifications",
-      icon: Settings2,
+      icon: AwardIcon,
       // items: [
       //   {
       //     title: 'Certifications',
@@ -74,18 +80,22 @@ const data = {
     {
       title: "Blog",
       url: "/blog",
-      icon: Settings2,
-
+      icon: FilePenLineIcon,
     },
     {
       title: "Tools & Skills",
       url: "/skills",
-      icon: Settings2,
+      icon: WrenchIcon,
     },
     {
       title: "Contact Me",
       url: "/contact",
-      icon: Settings2,
+      icon: MailsIcon,
+    },
+    {
+      title: "Logout",
+      url: "#",
+      icon: LogOutIcon,
     },
   ],
   projects: [
@@ -120,9 +130,6 @@ export function NavigationSidebar({
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   );

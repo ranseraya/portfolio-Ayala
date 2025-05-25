@@ -15,7 +15,7 @@ export function NavProfile({ user }) {
                 />
             </div>
             <div className="mt-6 flex flex-col items-center truncate group-data-[collapsible=icon]:hidden">
-                <span className="text-sm font-medium leading-none">{user.name}</span>
+                <span className="orbitron text-sm font-medium leading-none">{user.name}</span>
                 <span className="text-xs text-muted-foreground truncate">{user.role}</span>
             </div>
         </div>

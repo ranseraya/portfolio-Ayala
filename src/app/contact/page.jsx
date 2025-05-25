@@ -1,13 +1,6 @@
-import Achievements from '@/components/achievements';
-import Cerfifications from '@/components/certifications';
-import TypingEffect from '@/components/typing-effect';
-import Image from 'next/image';
-import React from 'react'
-
-export const metadata = {
-    title: "About Ayala | Front-End Developer & Cybersecurity Enthusiast",
-    description: "Profil Ayala Septama Rahanda, seorang pengembang front-end dan antusias di bidang keamanan siber.",
-};
+import Contact from "@/components/contact-email";
+import Contacts from "@/components/contacts";
+import TypingEffect from "@/components/typing-effect";
 
 export default function Page() {
     return (
@@ -17,8 +10,8 @@ export default function Page() {
                 className="grid grid-cols-1 h-full">
                 <div className="bg-muted/50 aspect-auto rounded-xl px-10 flex flex-col items-start h-[90vh] w-full overflow-auto">
                     <div className='mt-10 flex flex-col items-center w-full'>
-                        <h1 className="text-4xl orbitron">
-                            Hi, I'm Ayala
+                        <h1 className="text-4xl orbitron text-blue-600 dark:text-blue-400 ">
+                            Contact Me
                         </h1>
                         <span className='text-xl'>
                             <TypingEffect
@@ -30,13 +23,12 @@ export default function Page() {
                         </span>
                     </div>
 
-                    <div className='w-full gap-10 my-5 flex flex-col justify-center'>
-                        <Cerfifications />
-                        <Achievements />
+                    <div className="w-full flex flex-col justify-center">
+                        <Contact />
+                        <Contacts />
                     </div>
-                    
                 </div>
             </section>
-        </main >
+        </main>
     )
 }

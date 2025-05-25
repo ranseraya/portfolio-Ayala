@@ -1,96 +1,91 @@
+// ProjectTags.jsx
 'use client'
 
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import { SendIcon} from 'lucide-react'
 import NewTag from "./filter-tag";
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+
 const projectsData = [
     {
         id: 1,
-        title: 'Fullstack',
-        tag: ["All", "Full Stack"],
-        description: 'Lorem ipsum consectetur.',
-        bgImage: '/work-1.png',
-        gitUrl: '',
-        link: '',
+        title: 'Cyber Dashboard',
+        tag: ["All", "Full Stack", "Cybersecurity"],
+        description: 'Real-time security analytics dashboard for network monitoring.',
+        technologies: ["React.js", "Python", "Flask", "Elasticsearch"], 
+        bgImage: '/work-1.png', 
+        gitUrl: '#',
+        liveDemoUrl: '#',
     },
     {
         id: 2,
-        title: 'Frontend',
-        tag: ["All", "Frontend"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'E-commerce Platform',
+        tag: ["All", "Frontend", "Full Stack"],
+        description: 'Modern e-commerce platform with secure payment integration and user authentication.',
+        technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
         bgImage: '/work-2.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: '#',
     },
     {
         id: 3,
-        title: 'Backend',
-        tag: ["All", "Frontend", "Backend", "Fullstack"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'API Gateway Security',
+        tag: ["All", "Backend", "Cybersecurity", "Tools"],
+        description: 'Robust API gateway with JWT authentication and rate limiting for microservices.',
+        technologies: ["Go", "Kubernetes", "Redis"],
         bgImage: '/work-3.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: null,
     },
     {
         id: 4,
-        title: 'Backend',
-        tag: ["All", "Backend"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'Threat Intelligence Tool',
+        tag: ["All", "Backend", "Cybersecurity", "Tools"],
+        description: 'Automated tool to collect and analyze threat intelligence feeds.',
+        technologies: ["Python", "Pandas", "Scikit-learn"],
         bgImage: '/work-4.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: null,
     },
     {
         id: 5,
-        title: 'Frontend',
-        tag: ["All", "Frontend"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'Portfolio Website',
+        tag: ["All", "Frontend", "Full Stack"],
+        description: 'My personal portfolio showcasing various projects and skills.',
+        technologies: ["Next.js", "TailwindCSS", "ShadcnUI"],
         bgImage: '/work-3.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: '#',
     },
     {
         id: 6,
-        title: 'Frontend',
-        tag: ["All", "Frontend", "Backend", "Fullstack"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'Decentralized Chat App',
+        tag: ["All", "Frontend", "Backend"],
+        description: 'Blockchain-based chat application with end-to-end encryption.',
+        technologies: ["React", "Solidity", "Web3.js"],
         bgImage: '/work-2.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: null,
     },
     {
         id: 7,
-        title: 'Networking',
-        tag: ["All", "Tools"],
-        description: 'Lorem ipsum consectetur.',
+        title: 'Network Scanner',
+        tag: ["All", "Tools", "Cybersecurity"],
+        description: 'A custom network scanning tool for identifying vulnerabilities.',
+        technologies: ["C++", "Sockets"],
         bgImage: '/work-1.png',
-        gitUrl: '',
-        link: '',
+        gitUrl: '#',
+        liveDemoUrl: null,
     },
 ];
 
 const tagsList = [
-    {
-        name: "All",
-        total: 10,
-    },
-    {
-        name: "Fullstack",
-        total: 2,
-    },
-    {
-        name: "Frontend",
-        total: 4,
-    },
-    {
-        name: "Backend",
-        total: 3,
-    },
-    {
-        name: "Tools",
-        total: 1,
-    },
+    { name: "All", total: 7 }, 
+    { name: "Full Stack", total: 3 },
+    { name: "Frontend", total: 3 },
+    { name: "Backend", total: 3 },
+    { name: "Cybersecurity", total: 4 },
+    { name: "Tools", total: 3 },
 ];
 
 export default function ProjectTags() {
@@ -108,12 +103,13 @@ export default function ProjectTags() {
         project.tag.includes(tag)
     );
 
-    const cardVariants = {
+    const cardVariants = { 
         initial: { y: 50, opacity: 0 },
         animate: { y: 0, opacity: 1 },
     };
+
     return (
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center py-5">
             <div className="flex flex-wrap justify-center gap-4 my-5">
                 {tagsList.map((currTag, index) => {
                     return (
@@ -129,25 +125,57 @@ export default function ProjectTags() {
                     )
                 })}
             </div>
-            <div 
-            className="w-full grid sm:grid-cols-2 lg:grid-cols-4 gap-5 dark:text-black">
+
+            <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-5"> 
                 {filteredProjects.map((project, index) => (
-                    <div 
-                    key={index} 
-                    className="aspect-square bg-green-800 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-                    style={{backgroundImage: `url(${project.bgImage})`}}>
-                        <div className="glassmorph w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-2 flex items-center justify-between duration-500 group-hover:bottom-7">
-                            <div className="p-2 rounded-lg group-hover:bg-white/60 transition">
-                                <h2 className="font-semibold">{project.title}</h2>
-                                <p className="text-sm text-black font-semibold">{project.description}</p>
-                            </div>
-                            <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                                <SendIcon width={20} height={20} />
+                    <div
+                        key={index}
+                        className="aspect-square bg-card rounded-xl relative cursor-pointer group overflow-hidden
+                                   border border-border shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                        <div
+                            className="absolute inset-0 bg-no-repeat bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                            style={{ backgroundImage: `url(${project.bgImage})` }}
+                        ></div>
+                        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition-colors duration-300"></div>
+                        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-4 w-11/12 rounded-xl glassmorph flex flex-col items-start justify-between duration-500 group-hover:bottom-7 z-10"> {/* Gunakan glassmorph yang sudah ada */}
+                            <h2 className="font-semibold text-xl text-primary mb-1 orbitron">{project.title}</h2> 
+                            <p className="text-sm text-foreground mb-3">{project.description}</p> 
+                            {project.technologies && project.technologies.length > 0 && (
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {project.technologies.map((tech, techIndex) => (
+                                        <span key={techIndex} className="px-2 py-0.5 text-xs rounded-full bg-secondary text-secondary-foreground">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                            <div className="flex gap-3 mt-auto"> 
+                                {project.liveDemoUrl && (
+                                    <a
+                                        href={project.liveDemoUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center px-3 py-1.5 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:opacity-80 transition-opacity"
+                                    >
+                                        <FaExternalLinkAlt className="mr-1" /> Live Demo
+                                    </a>
+                                )}
+                                {project.gitUrl && (
+                                    <a
+                                        href={project.gitUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center px-3 py-1.5 bg-secondary text-secondary-foreground rounded-full text-sm font-medium hover:bg-muted/80 transition-colors"
+                                    >
+                                        <FaGithub className="mr-1" /> GitHub
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
                 ))}
-                </div>
+            </div>
         </div>
     )
 }

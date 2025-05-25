@@ -1,6 +1,6 @@
-import { Orbitron } from "next/font/google";
+import { Orbitron, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
-import { AppSidebar } from "@/components/app-sidebar";
+import { NavigationSidebar } from "@/components/navigation-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-tonggle";
 import {
@@ -24,6 +24,18 @@ const orbitron = Orbitron({
   variable: '--font-cyber',
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-space-grotesk',
+});
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
+});
+
 export const metadata = {
   title: "Portofolio Ayala",
   description: "Third Portofolio Website by Ayala",
@@ -33,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${orbitron.variable} antialiased`}
+        className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -42,7 +54,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <SidebarProvider>
-            <AppSidebar />
+            <NavigationSidebar />
             <SidebarInset>
               <header
                 className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear"> {/* group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 */}
@@ -50,19 +62,6 @@ export default function RootLayout({ children }) {
                   <SidebarTrigger className="-ml-1" target="left" />
                   <ModeToggle />
                   <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4" />
-                  <Breadcrumb>
-                    <BreadcrumbList>
-                      <BreadcrumbItem className="hidden md:block">
-                        <BreadcrumbLink href="#">
-                          Building Your Application
-                        </BreadcrumbLink>
-                      </BreadcrumbItem>
-                      <BreadcrumbSeparator className="hidden md:block" />
-                      <BreadcrumbItem>
-                        <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                      </BreadcrumbItem>
-                    </BreadcrumbList>
-                  </Breadcrumb>
                 </div>
               </header>
               {children}
