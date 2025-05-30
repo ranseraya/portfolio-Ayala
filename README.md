@@ -31,4 +31,4 @@ This project is built using a modern and robust technology stack:
 * **Theming**: [Next-themes](https://github.com/pacocoursey/next-themes) for dark/light mode functionality.
 * **Forms**: [Web3Forms](https://web3forms.com/) for secure contact form submission.
 * **Fonts**: Google Fonts (`Orbitron`, `Space Grotesk`, `Space Mono`) for a distinctive aesthetic.
-* **Deployment**: Vercel (recommended).
+* **Deployment**: soon
