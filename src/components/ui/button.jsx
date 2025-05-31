@@ -20,7 +20,7 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         navbar: 
-          "hover:bg-gradient-to-r hover:from-transparent hover:via-blue-700/50 to-transparent",
+          "hover:bg-gradient-to-r hover:from-transparent hover:via-[#00C29E]/30 hover:to-transparent",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

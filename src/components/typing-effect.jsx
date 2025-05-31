@@ -1,8 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const words = ['Halo!', 'Selamat datang di Next.js', 'Typing Effect'];
-
 export default function TypingEffect({words}) {
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);

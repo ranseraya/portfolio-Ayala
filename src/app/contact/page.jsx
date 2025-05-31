@@ -1,34 +1,42 @@
-import Contact from "@/components/contact-email";
-import Contacts from "@/components/contacts";
+import React from "react";
 import TypingEffect from "@/components/typing-effect";
+import ContactTerminalForm from "@/components/contact-page/contact-terminal-form";
+import ContactSocialInfo from "@/components/contact-page/contact-social-info";
+import { contactPageHeaderData } from "@/lib/data/contact";
 
-export default function Page() {
-    return (
-        <main className="flex flex-col flex-1 gap-4 p-4 pt-0">
-            <section
-                aria-labelledby="about-heading"
-                className="grid grid-cols-1 h-full">
-                <div className="bg-muted/50 aspect-auto rounded-xl px-10 flex flex-col items-start h-[90vh] w-full overflow-auto">
-                    <div className='mt-10 flex flex-col items-center w-full'>
-                        <h1 className="text-4xl orbitron text-blue-600 dark:text-blue-400 ">
-                            Contact Me
-                        </h1>
-                        <span className='text-xl'>
-                            <TypingEffect
-                                words={[
-                                    "Front-End Developer",
-                                    "Cybersecurity Enthusiast"
-                                ]}
-                            />
-                        </span>
-                    </div>
+export const metadata = {
+  title: "Contact Me | Ayala's Portfolio",
+  description:
+    "Hubungi Ayala Septama Rahanda untuk peluang kolaborasi, proyek, atau pertanyaan seputar pengembangan web dan keamanan siber.",
+};
 
-                    <div className="w-full flex flex-col justify-center">
-                        <Contact />
-                        <Contacts />
-                    </div>
-                </div>
-            </section>
-        </main>
-    )
+export default function ContactPage() {
+  const { mainTitle, typingWords, description } = contactPageHeaderData;
+  return (
+    <main className="flex flex-col flex-1 gap-4 p-4 pt-0 max-h-[90vh]">
+      <section
+        aria-labelledby="contact-heading"
+        className="bg-muted/50 rounded-xl px-4 md:px-10 w-full overflow-auto h-[90vh]"
+      >
+        <div className="text-center mb-5 mt-10">
+          <h1 className="text-2xl sm:text-4xl orbitron text-primary">{mainTitle}</h1>
+          <span className="text-sm sm:text-xl text-foreground">
+            <TypingEffect words={typingWords} />
+          </span>
+          <p className="text-xs sm:text-base text-muted-foreground mt-2 max-w-2xl mx-auto text-center">
+            {description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="md:col-span-1">
+            <ContactTerminalForm />
+          </div>
+          <div className="md:col-span-1">
+            <ContactSocialInfo />
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }

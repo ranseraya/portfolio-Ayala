@@ -1,12 +1,15 @@
-"use client"
+"use client";
 
+import * as React from "react";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,35 +19,42 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar"
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+} from "@/components/ui/sidebar";
 
 export function NavMain({ items }) {
-  const rawPathname = usePathname()
-  const [pathname, setPathname] = useState(rawPathname)
+  const pathname = usePathname();
 
-  useEffect(() => {
-    setPathname(rawPathname)
-  }, [rawPathname]) // update saat route berubah
+  const isSubPathActive = (subItems) => {
+    return subItems.some((subItem) => pathname.startsWith(subItem.url));
+  };
+
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Navigation</SidebarGroupLabel>
       <SidebarMenu className={"gap-2"}>
         {items.map((item) => {
-          const isActive = pathname === item.url || pathname.startsWith(item.url + "/");
+          const isActiveMain =
+            pathname === item.url ||
+            (item.url !== "/" && pathname.startsWith(item.url + "/"));
+          const isActiveSub =
+            item.items && item.items.length > 0 && isSubPathActive(item.items);
+          const isActive = isActiveMain || isActiveSub;
+
           return item.items && item.items.length > 0 ? (
-            // Jika ada submenu
             <Collapsible
               key={item.title}
               asChild
-              defaultOpen={item.isActive}
+              defaultOpen={isActive}
               className="group/collapsible"
             >
               <SidebarMenuItem>
                 <CollapsibleTrigger asChild>
-                  <SidebarMenuButton tooltip={item.title} className={isActive ? 'bg-accent text-accent-foreground' : ''} >
+                  <SidebarMenuButton
+                    tooltip={item.title}
+                    className={
+                      isActive ? "bg-primary text-primary-foreground" : ""
+                    }
+                  >
                     {item.icon && <item.icon />}
                     <span>{item.title}</span>
                     <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
@@ -52,35 +62,47 @@ export function NavMain({ items }) {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <SidebarMenuSub>
-                    {item.items.map((subItem) => (
-                      <SidebarMenuSubItem key={subItem.title}>
-                        <SidebarMenuSubButton asChild>
-                          <a href={subItem.url}>
-                            <span>{subItem.title}</span>
-                          </a>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                    ))}
+                    {item.items.map((subItem) => {
+                      const isSubItemActive = pathname === subItem.url;
+                      return (
+                        <SidebarMenuSubItem key={subItem.title}>
+                          <SidebarMenuSubButton asChild>
+                            <Link
+                              href={subItem.url}
+                              className={
+                                isSubItemActive
+                                  ? "font-semibold text-primary"
+                                  : ""
+                              }
+                            >
+                              {subItem.title}
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      );
+                    })}
                   </SidebarMenuSub>
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
           ) : (
-            // Jika tidak ada submenu
-            <SidebarMenuItem key={item.title} className={`relative rounded-lg ${isActive ? 'bg-gradient-to-r from-blue-600 via-transparent to-red-600 shadow-md shadow-blue-500/50' : ''}`} >
-              {/* <div className={`w-2 h-full bg-blue-500 absolute -left-2.5 rounded-e-lg ${isActive ? 'block' : 'hidden'} transition-all duration-500`}></div> */}
-              {/* <div className={`bg-radial from-blue-400/30 to-tranparent rounded-full h-10 w-10 -left-1 -top-1 absolute ${isActive ? 'hidden' : 'hidden'} transition-all duration-500`}></div> */}
+            <SidebarMenuItem
+              key={item.title}
+              className={`rounded-lg ${
+                isActive ? "bg-primary text-primary-foreground" : ""
+              }`}
+            >
               <SidebarMenuButton tooltip={item.title} asChild>
                 <Link href={item.url}>
                   {item.icon && <item.icon />}
-                  <span className={isActive ? 'font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white' : ''}>{item.title}</span>
+                  <span className={isActive ? "font-semibold" : ""}>
+                    {item.title}
+                  </span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
-          )
-        }
-        )}
-
+          );
+        })}
       </SidebarMenu>
     </SidebarGroup>
   );
