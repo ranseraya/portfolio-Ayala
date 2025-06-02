@@ -43,7 +43,7 @@ export default function SkillSet() {
   }, [api]);
 
   return (
-    <div className="mx-auto w-full max-w-6xl flex flex-col items-center justify-center">
+    <div className="mx-auto w-full max-w-96 lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl flex flex-col items-center justify-center">
       <h1 className="text-xl sm:text-3xl font-bold text-primary my-5">
         My Skill Set
       </h1>
@@ -52,7 +52,7 @@ export default function SkillSet() {
           {skillSetList.map((skillSet, index) => (
             <CarouselItem
               key={index}
-              className="md:basis-1/2 lg:basis-1/3 basis-1/1"
+              className="lg:basis-1/2 xl:basis-1/3 basis-1/1"
             >
               <Card className="glassmorph-g h-full relative">
                 <CardContent className="flex flex-col aspect-auto items-center justify-center px-6 gap-4 h-full">

@@ -11,7 +11,7 @@ export default function Technologies() {
             <h1 className="text-xl sm:text-3xl font-bold text-primary mt-10 mb-3 text-center">
               {category.Title}
             </h1>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
               {category.Technologies.map((tech, techIndex) => {
                 return (
                   <li

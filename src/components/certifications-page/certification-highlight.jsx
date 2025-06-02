@@ -41,13 +41,13 @@ export default function CertificationsHighlight() {
     return () => clearInterval(interval);
   }, [api]);
   return (
-    <div className="mx-auto w-full max-w-6xl">
+    <div className="mx-auto w-full max-w-96 lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
       <Carousel opts={{ loop: true }} setApi={setApi} className="w-full">
         <CarouselContent>
           {highlightCertifications.map((cert, index) => (
             <CarouselItem
               key={cert.id}
-              className="md:basis-1/2 lg:basis-1/3 basis-1/1"
+              className="lg:basis-1/2 xl:basis-1/3 basis-1/1"
             >
               <Card className=" h-auto relative">
                 <CardContent className="relative flex flex-col items-center justify-between px-6 h-auto">
@@ -89,8 +89,8 @@ export default function CertificationsHighlight() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden sm:flex text-primary hover:text-primary-foreground hover:bg-primary" />
-        <CarouselNext className="hidden sm:flex text-primary hover:text-primary-foreground hover:bg-primary" />
+        <CarouselPrevious className="hidden md:flex text-primary hover:text-primary-foreground hover:bg-primary" />
+        <CarouselNext className="hidden md:flex text-primary hover:text-primary-foreground hover:bg-primary" />
       </Carousel>
 
       <div className="flex justify-center gap-2 mt-4">

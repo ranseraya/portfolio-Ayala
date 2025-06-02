@@ -49,7 +49,6 @@ export default function RootLayout({ children }) {
               <Header />
               {children}
             </SidebarInset>
-            {/* <div className="w-80 h-screen border"></div> */}
           </SidebarProvider>
         </ThemeProvider>
       </body>

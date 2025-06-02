@@ -27,7 +27,7 @@ export default function BlogPage() {
             {description}
           </p>
         </div>
-        <div className="mt-5 sm:mt-10 w-full grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div className="mt-5 sm:mt-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
           <ArticleContainer />
           <RecomendationArticle />
         </div>

@@ -16,8 +16,8 @@ export default function RecomendationArticle() {
   );
 
   return (
-    <aside className="md:col-span-5 bg-card rounded-xl p-5 h-120 border border-border shadow-md">
-      <h3 className="text-primary text-xl sm:text-2xl font-bold mb-4">
+    <aside className="md:col-span-5 bg-card rounded-xl p-5 min-h-120 border border-border shadow-md">
+      <h3 className="text-primary text-xl xl:text-2xl font-bold mb-4">
         Filter Content
       </h3>
       <section className="flex flex-wrap gap-2 mb-6">
@@ -35,7 +35,7 @@ export default function RecomendationArticle() {
         })}
       </section>
       <section>
-        <h3 className="text-xl sm:text-2xl text-primary font-bold mb-4">
+        <h3 className="text-xl xl:text-2xl text-primary font-bold mb-4">
           Recommended Articles
         </h3>
         <ul className="space-y-3">
@@ -44,7 +44,7 @@ export default function RecomendationArticle() {
               <li key={index}>
                 <a
                   href={data.link}
-                  className="text-foreground hover:underline block text-base line-clamp-2"
+                  className="text-foreground hover:underline block text-base lg:text-sm xl:text-base line-clamp-2"
                   title={data.title}
                 >
                   {data.title}

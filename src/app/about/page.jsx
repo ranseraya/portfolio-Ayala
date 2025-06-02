@@ -48,8 +48,8 @@ export default function Page() {
             <h2 className="text-xl sm:text-3xl font-semibold text-primary">
               Personal Introduction
             </h2>
-            <div className="flex sm:flex-row flex-col w-full justify-center items-center mt-5 gap-10">
-              <div className="relative bg-card h-75 w-2/3 sm:w-1/4 rounded-xl overflow-hidden glassmorph-g">
+            <div className="flex lg:flex-row flex-col w-full justify-center items-center mt-5 gap-10">
+              <div className="relative bg-card h-75 w-2/3 lg:w-1/2 xl:w-1/4 rounded-xl overflow-hidden glassmorph-g">
                 <Image
                   src={personalIntro.imageSrc}
                   alt="foto-about"

@@ -14,7 +14,7 @@ export default function CertificationsCard({ cert }) {
                 <p className="text-xs text-muted-foreground text-center mt-0.5 border px-2 py-0.5 rounded-full">{cert.date}</p>
             </div>
             <div className="p-2 pt-3 flex flex-col items-end justify-between w-full flex-grow">
-                <h3 className="text-sm sm:text-base font-semibold text-card-foreground w-full text-left line-clamp-2 leading-tight" title={cert.title}>
+                <h3 className="text-sm sm:text-base text-center font-semibold text-card-foreground w-full line-clamp-2 leading-tight" title={cert.title}>
                     {cert.title}
                 </h3>
                 <div className="w-full mt-3 flex justify-between">

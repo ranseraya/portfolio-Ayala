@@ -33,7 +33,7 @@ export default function ProjectSection() {
         })}
       </div>
 
-      <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-5">
         {filteredProjects.map((project, index) => (
           <div
             key={index}

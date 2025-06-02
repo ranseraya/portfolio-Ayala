@@ -13,17 +13,17 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-1 flex-col gap-4 p-4 pt-0 max-h-[90vh]">
-      <section className="grid auto-rows-min gap-4 md:grid-cols-2">
-        <div className="relative min-h-85 bg-muted/80 aspect-auto rounded-xl p-4 flex flex-col items-start justify-around">
+    <main className="flex flex-1 flex-col gap-4 p-4 pt-0 max-h-[90vh] overflow-y-scroll">
+      <section className="grid auto-rows-min gap-4 lg:grid-cols-2">
+        <div className="relative min-h-50 sm:min-h-85 bg-muted/80 aspect-auto rounded-xl p-4 flex flex-col items-start justify-around">
           <div className="z-1 pr-4 h-1/2 flex flex-col justify-start">
-            <h1 className="text-lg sm:text-3xl mb-5 orbitron text-primary">
+            <h1 className="text-lg lg:text-2xl xl:text-3xl mb-5 orbitron text-primary">
               Hi, I'm {introData.firstname} <br />
               <TypingEffect
                 words={["Front-End Developer", "Cybersecurity Enthusiast"]}
               />
             </h1>
-            <p className="text-sm sm:text-lg text-foreground text-justify">
+            <p className="text-sm md:text-base xl:text-lg text-foreground text-justify">
               {introData.description}
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="w-1/2 flex justify-center items-center">
-            <div className="w-auto h-11/12 rounded-full flex items-center overflow-hidden glassmorph-g">
+            <div className="w-auto max-h-11/12 h-auto rounded-full flex items-center overflow-hidden glassmorph-g">
               <Image
                 src={introData.profilePic}
                 width={300}
@@ -122,13 +122,13 @@ export default function Page() {
             See Portfolio <span className="hidden sm:block">→</span>
           </a>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 text-sm sm:text-base">
+        <div className="grid gap-4 lg:grid-cols-2 text-sm sm:text-base">
           {expertiseAreas.map((area, index) => (
             <div key={index} className="h-44 rounded-xl glassmorph-g flex flex-col justify-center items-center text-foreground">
-              <h1 className="texl-base sm:text-xl mb-4 orbitron text-primary">{area.title}</h1>
-              <ul className="flex flex-col justify-baseline text-foreground px-5">
+              <h1 className="texl-base sm:text-xl mb-4 md:mb-2 xl:mb-4 orbitron text-primary">{area.title}</h1>
+              <ul className="flex flex-col justify-baseline text-foreground px-5 md:px-3 xl:px-5">
                 {area.points.map((point, pointIndex) => (
-                  <li key={pointIndex} className="flex items-baseline">- <p className="text-xs sm:text-base">{point}</p></li>
+                  <li key={pointIndex} className="flex items-baseline">- <p className="text-xs lg:text-sm xl:text-base">{point}</p></li>
                 ))}
               </ul>
             </div>

@@ -8,15 +8,13 @@ const EducationSection = () => {
       <h2 className="text-xl sm:text-3xl font-bold mb-10 text-primary">
         Education
       </h2>
-      <div className="ml-6 space-y-10">
+      <div className="ml-6">
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className="flex items-start justify-between gap-0 sm:gap-6"
+            className="relative flex items-start justify-between gap-0 sm:gap-6 h-auto border-l-4 pb-10"
           >
-            <div className="relative flex">
-              <div className="absolute w-1 h-96 sm:h-55 bg-border "></div>
-              <div className="absolute -left-6.5 -top-8.5 sm:top-0 sm:-left-9.5 w-15 sm:w-20 h-15 sm:h-20 bg-card border-4 border-primary rounded-full flex overflow-hidden justify-center items-center">
+              <div className="absolute -left-7.5 -top-8.5 sm:top-0 sm:-left-9.5 w-15 sm:w-20 h-15 sm:h-20 bg-card border-4 border-primary rounded-full flex overflow-hidden justify-center items-center">
                 <Image
                   src={edu.logo}
                   width={80}
@@ -25,7 +23,6 @@ const EducationSection = () => {
                   className="object-contain"
                 />
               </div>
-            </div>
             <div className="ml-0 sm:ml-15 bg-card text-foreground p-5 rounded-xl w-full shadow-md border border-border">
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center mb-2">
                 <h3 className="text-sm sm:text-lg font-bold">

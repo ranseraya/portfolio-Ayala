@@ -15,7 +15,7 @@ const NewTag = ({ name, total, isSelected, onClick, rounded, fontSize }) => {
 
   return (
     <button
-      className={`${buttonStyles} rounded-${rounded} border-2 text-${fontSize[0]} sm:text-${fontSize[1]} px-2 sm:px-4 py-1 sm:py-2 cursor-pointer transition-colors duration-200`}
+      className={`${buttonStyles} rounded-${rounded} border-2 text-${fontSize[0]} xl:text-${fontSize[1]} px-2 sm:px-4 py-1 sm:py-2 cursor-pointer transition-colors duration-200`}
       onClick={() => onClick(name)}
     >
       {name} <span className="hidden sm:inline">{total ? `(${total})` : ""}</span>
