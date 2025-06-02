@@ -8,8 +8,8 @@ export const introData = {
     typingWords: ["Front-End Developer", "Cybersecurity Enthusiast"],
     description: "Passionate about building web apps and exploring cybersecurity principles through self-paced learning and real projects.",
     location: "Based in Indonesia",
-    profilePic: "/1G.png", 
-    resumeLink: "/sample-resume.pdf",
+    profilePic: "./1G.png", 
+    resumeLink: "./sample-resume.pdf",
 };
 
 export const contactInfo = {

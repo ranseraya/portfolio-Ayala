@@ -79,35 +79,30 @@ export const getTechIcon = (name) => {
 export const skillSetList = [
     {
         title: "Fullstack Web Development",
-        logo: "/icons/network.svg",
         lucideIcon: <NetworkIcon className="w-10 h-10 text-primary" />,
         url: "#",
         description: "Providing complete solutions for website development, from front-end to backend, including database management and deployment strategies.",
     },
     {
         title: "Frontend Web Development",
-        logo: "/icons/network.svg",
         lucideIcon: <FileEditIcon className="w-10 h-10 text-primary" />,
         url: "#",
         description: "Specializing in creating responsive, modern, and user-friendly interfaces with a focus on performance optimization and accessibility.",
     },
     {
         title: "Information Security Analyst",
-        logo: "/icons/shield-check.svg",
         lucideIcon: <ShieldAlertIcon className="w-10 h-10 text-primary" />,
         url: "#",
         description: "Providing best security for information, including vulnerability assessment, threat analysis, and incident response planning.",
     },
     {
         title: "Application Penetration Testing",
-        logo: "/icons/shield-check.svg",
         lucideIcon: <ShieldAlertIcon className="w-10 h-10 text-primary" />,
         url: "#",
         description: "Conducting comprehensive penetration tests for web applications, APIs, and networks to identify and mitigate security weaknesses.",
     },
     {
         title: "Technical Content Writing",
-        logo: "/icons/file-pen.svg",
         lucideIcon: <FileEditIcon className="w-10 h-10 text-primary" />,
         url: "#",
         description: "High-quality content writing services for articles, blogs, or websites, focusing on IT and cybersecurity domains with clear and engaging explanations.",

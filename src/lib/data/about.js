@@ -29,7 +29,7 @@ export const aboutPageData = {
     },
   ],
   personalIntro: {
-    imageSrc: "/about.jpeg",
+    imageSrc: "./about.jpeg",
     paragraph1: "I am Ayala Septama Rahanda, currently an IT student. My focus is Front-End developer and cybersecurity field. I am very enthusiastic about building clean and user-friendly web interfaces, while actively exploring the world of cybersecurity.",
     paragraph2: "I really enjoy working in a collaborative environment, where I can continue to learn and grow through real projects. The combination of development skills and cybersecurity understanding is key for me to create comprehensive, innovative and threat-protected digital solutions.",
   },
@@ -65,7 +65,7 @@ export const careerGoalsData = [
 
 export const educationData = [
   {
-    logo: "/images.jpg",
+    logo: "./images.jpg",
     title: "Computer and Networking Engineering",
     institution: "Vocational School",
     date: "Jun 2020 ➡ May 2023",
@@ -73,7 +73,7 @@ export const educationData = [
     tech: [],
   },
   {
-    logo: "/images.jpg",
+    logo: "./images.jpg",
     title: "Bachelor of Informatics",
     institution: "UPN Veteran East Java",
     date: "Jul 2023 ➡ Now",
@@ -84,7 +84,7 @@ export const educationData = [
 
 export const experienceData = [
   {
-    logo: "/images.jpg",
+    logo: "./images.jpg",
     title: "Networking Internship",
     institution: "PT Laxo Akses Global",
     date: "July 2020 ➡ October 2020",
@@ -92,7 +92,7 @@ export const experienceData = [
     tech: ["Networking Basics", "Cisco CLI", "Windows Server"],
   },
   {
-    logo: "/images.jpg",
+    logo: "./images.jpg",
     title: "Web Development Freelancer",
     institution: "Self-Employed",
     date: "Jul 2024 ➡ Present",
