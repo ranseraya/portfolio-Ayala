@@ -57,17 +57,7 @@ export default function SkillSet() {
               <Card className="glassmorph-g h-full relative">
                 <CardContent className="flex flex-col aspect-auto items-center justify-center px-6 gap-4 h-full">
                   <div className="bg-secondary border-4 border-primary p-3 rounded-full flex items-center justify-center">
-                    {skillSet.lucideIcon ? (
-                      skillSet.lucideIcon
-                    ) : (
-                      <Image
-                        src={skillSet.logo}
-                        width={30}
-                        height={30}
-                        alt={skillSet.title}
-                        className="object-contain"
-                      />
-                    )}
+                    {skillSet.lucideIcon}
                   </div>
                   <h2
                     className="text-center text-base sm:text-2xl font-bold text-foreground"
