@@ -33,9 +33,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning> 
       <body
-        className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`}
+        className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`} 
       >
         <ThemeProvider
           attribute="class"
