@@ -5,9 +5,9 @@ import ContactSocialInfo from "@/components/contact-page/contact-social-info";
 import { contactPageHeaderData } from "@/lib/data/contact";
 
 export const metadata = {
-  title: "Contact Me | Ayala's Portfolio",
+  title: "Contact or Connect with Ayala Septama Rahanda",
   description:
-    "Hubungi Ayala Septama Rahanda untuk peluang kolaborasi, proyek, atau pertanyaan seputar pengembangan web dan keamanan siber.",
+    "Contact Ayala Septama Rahanda for project collaboration opportunities, technical questions, or just to discuss web development and cybersecurity.",
 };
 
 export default function ContactPage() {

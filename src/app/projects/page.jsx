@@ -3,9 +3,9 @@ import ProjectSection from "@/components/projects-page/projects";
 import { projectsPageHeaderData } from "@/lib/data/projects";
 
 export const metadata = {
-  title: "My Projects | Front-End Developer & Cybersecurity Enthusiast",
+  title: "Portfolio Ayala Septama Rahanda",
   description:
-    "Koleksi proyek-proyek saya di bidang pengembangan web dan keamanan siber.",
+    "Explore the collection of web development projects (Front-End, Backend, Full Stack) and cybersecurity solutions created by Ayala Septama Rahanda.",
 };
 
 export default function ProjectsPage() {

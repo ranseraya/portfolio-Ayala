@@ -28,7 +28,8 @@ const data = {
     email: "ayalarahanda0@gmail.com",
     role: "Web Developer",
     avatar: "/",
-    image: '/profile2.jpg',
+    image: '/dark icon.png',
+    image2: '/white icon.png',
   },
   navMain: [
     {

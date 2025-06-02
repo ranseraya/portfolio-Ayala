@@ -4,9 +4,9 @@ import TypingEffect from "@/components/typing-effect";
 import { skillsPageHeaderData } from "@/lib/data/skills";
 
 export const metadata = {
-  title: "Skills & Tools | Ayala's Portfolio",
+  title: "Expertise Ayala Septama Rahanda",
   description:
-    "Daftar keahlian dan teknologi yang dikuasai oleh Ayala di bidang pengembangan web dan keamanan siber.",
+    "A comprehensive list of technical skills, programming languages, frameworks, and tools mastered by Ayala Septama Rahanda for web development and cybersecurity analysis.",
 };
 
 export default function SkillsToolsPage() {

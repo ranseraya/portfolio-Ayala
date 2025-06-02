@@ -6,16 +6,16 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { introData, contactInfo, expertiseAreas } from '@/lib/data/dashboard'
 
 export const metadata = {
-  title: "Portfolio Ayala",
+  title: "Dashboard Portfolio Ayala",
   description:
-    "Portfolio website Ayala Septama Rahanda",
+    "Welcome to Ayala Septama Rahanda's portfolio. Explore modern web development projects and cybersecurity insights. Ready to collaborate for innovative solutions.",
 };
 
 export default function Page() {
   return (
     <main className="flex flex-1 flex-col gap-4 p-4 pt-0 max-h-[90vh] overflow-y-scroll">
       <section className="grid auto-rows-min gap-4 lg:grid-cols-2">
-        <div className="relative min-h-50 sm:min-h-85 bg-muted/80 aspect-auto rounded-xl p-4 flex flex-col items-start justify-around">
+        <div className="relative min-h-50 sm:min-h-80 bg-muted/80 aspect-auto rounded-xl p-4 flex flex-col items-start justify-around">
           <div className="z-1 pr-4 h-1/2 flex flex-col justify-start">
             <h1 className="text-lg lg:text-2xl xl:text-3xl mb-5 orbitron text-primary">
               Hi, I'm {introData.firstname} <br />

@@ -5,9 +5,9 @@ import React from "react";
 import { blogPageHeaderData } from "@/lib/data/blog";
 
 export const metadata = {
-  title: "Blog | Ayala's Cybersecurity Insights",
+  title: "Blog and Articles Ayala Septama Rahanda",
   description:
-    "Artikel dan wawasan terbaru tentang pengembangan web, keamanan siber, dan teknologi.",
+    "Read the latest articles and tutorials from Ayala Septama Rahanda about Front-End Development, Backend, cybersecurity, coding tips, and technology trends.",
 };
 
 export default function BlogPage() {

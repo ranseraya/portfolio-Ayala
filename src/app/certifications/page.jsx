@@ -6,9 +6,9 @@ import React from "react";
 import { certificationsPageHeaderData } from "@/lib/data/certifications";
 
 export const metadata = {
-  title: "Certifications & Achievements | Ayala's Portfolio",
+  title: "Achievements and Certifications Ayala Septama Rahanda",
   description:
-    "Koleksi sertifikasi dan pencapaian profesional Ayala di bidang pengembangan web dan keamanan siber.",
+    "View all of Ayala Septama Rahanda's official certifications and academic/professional achievements in web development, React, Next.js, and cybersecurity.",
 };
 
 export default function CertsAchievementsPage() {

@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function NavProfile({ user }) {
+  const { theme } = useTheme();
+
+  const currentImageSrc = theme === "dark" ? user.image : user.image2;
+
   return (
     <div className="mt-10 flex justify-center flex-col items-center gap-3">
-      <div className="rounded-md overflow-hidden scale-150 transition-all duration-500 group-data-[collapsible=icon]:scale-100">
+      <div className="rounded-full overflow-hidden border scale-150 transition-all duration-500 group-data-[collapsible=icon]:scale-100">
         <Image
-          src={user.image}
+          src={currentImageSrc}
           alt={`Foto Profil ${user.name}`}
           width={100}
           height={100}
@@ -13,7 +20,7 @@ export function NavProfile({ user }) {
         />
       </div>
       <div className="mt-6 flex flex-col items-center truncate group-data-[collapsible=icon]:hidden">
-        <span className="orbitron text-sm font-medium leading-none text-foreground">
+        <span className="orbitron text-sm font-medium leading-none text-primary">
           {user.name}
         </span>{" "}
         <span className="text-xs text-muted-foreground truncate">

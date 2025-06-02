@@ -9,9 +9,9 @@ import React from "react";
 import { aboutPageData } from "@/lib/data/about";
 
 export const metadata = {
-  title: "About Ayala | Front-End Developer & Cybersecurity Enthusiast",
+  title: "Profile Ayala Septama Rahanda",
   description:
-    "Profil Ayala Septama Rahanda, seorang pengembang front-end dan antusias di bidang keamanan siber.",
+    "Profile Ayala Septama Rahanda, a passionate and enthusiastic front-end developer in the field of cybersecurity. Learn about her journey, career goals, and personal interests.",
 };
 
 export default function Page() {
