@@ -36,7 +36,7 @@ export default function CertificationsHighlight() {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 15000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, [api]);
