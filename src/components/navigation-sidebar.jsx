@@ -11,6 +11,8 @@ import {
   Frame,
   Map,
   PieChart,
+  Music4Icon,
+  FlagIcon
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -28,8 +30,8 @@ const data = {
     email: "ayalarahanda0@gmail.com",
     role: "Web Developer",
     avatar: "/",
-    image: './dark icon.png',
-    image2: './white icon.png',
+    image: './avatar-dark.gif',
+    image2: './avatar-white.gif',
   },
   navMain: [
     {
@@ -76,14 +78,14 @@ const data = {
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "CTF Playground",
       url: "#",
-      icon: PieChart,
+      icon: FlagIcon,
     },
     {
-      name: "Travel",
+      name: "Discord Music Bot",
       url: "#",
-      icon: Map,
+      icon: Music4Icon,
     },
   ],
 }
