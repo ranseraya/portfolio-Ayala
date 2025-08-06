@@ -34,7 +34,7 @@ export const projectsData = [
     tag: ["All", "Frontend" , "Backend"],
     description: "A modern and comprehensive news and article publishing platform.",
     technologies: ["Next JS", "Javascript"],
-    bgImage: "./work-3.png",
+    bgImage: "./portal-news.png",
     gitUrl: "#",
     liveDemoUrl: null,
   },
