@@ -10,8 +10,8 @@ export const introData = {
     location: "Based in Indonesia",
     profilePic: "./1G.png",
     resumeLink: "./sample-resume.pdf",
-    contact: "./contact",
-    project: "./project"
+    contact: "/portfolio-Ayala/contact",
+    project: "/portfolio-Ayala/project"
 };
 
 export const contactInfo = {
