@@ -4,6 +4,7 @@ import HighlightHome from "@/components/dashboard-page/highlight-Home";
 import { UserCircle2Icon, MailsIcon } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { introData, contactInfo, expertiseAreas } from '@/lib/data/dashboard'
+import Link from "next/link";
 
 export const metadata = {
   title: "Dashboard Portfolio Ayala",
@@ -28,12 +29,12 @@ export default function Page() {
             </p>
           </div>
           <div className="flex flex-row mt-10 sm:mt-4 items-center gap-4">
-            <a
+            <Link
               href="/contact"
               className="text-xs sm:text-base px-5 py-2 border border-primary rounded-full bg-primary text-primary-foreground flex items-center gap-2 dark:bg-transparent dark:border-primary dark:text-primary"
             >
               Contact me
-            </a>
+            </Link>
             <a
               href={introData.resumeLink}
               download
@@ -115,12 +116,12 @@ export default function Page() {
           <h2 className="text-xl sm:text-3xl font-semibold spaceGrotesk text-foreground">
             My Expertise
           </h2>
-          <a
+          <Link
             href="/projects"
             className="text-xs sm:text-base px-3 py-1.5 border rounded-full border-border flex items-center gap-2 bg-card text-card-foreground duration-500 hover:bg-primary hover:text-primary-foreground"
           >
             See Portfolio <span className="hidden sm:block">→</span>
-          </a>
+          </Link>
         </div>
         <div className="grid gap-4 lg:grid-cols-2 text-sm sm:text-base">
           {expertiseAreas.map((area, index) => (
