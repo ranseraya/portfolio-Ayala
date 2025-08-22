@@ -30,18 +30,18 @@ export default function Page() {
           </div>
           <div className="flex flex-row mt-10 sm:mt-4 items-center gap-4">
             <Link
-              href="/contact"
+              href={introData.contact}
               className="text-xs sm:text-base px-5 py-2 border border-primary rounded-full bg-primary text-primary-foreground flex items-center gap-2 dark:bg-transparent dark:border-primary dark:text-primary"
             >
               Contact me
             </Link>
-            <a
+            <Link
               href={introData.resumeLink}
               download
               className="text-xs sm:text-base px-5 py-2 border rounded-full border-border flex items-center gap-2 bg-card text-card-foreground duration-500 hover:bg-primary hover:text-primary-foreground"
             >
               My resume
-            </a>
+            </Link>
           </div>
         </div>
         <div className="bg-muted/80 aspect-auto rounded-xl flex justify-between gap-2 px-5 py-5 sm:py-0">
@@ -117,7 +117,7 @@ export default function Page() {
             My Expertise
           </h2>
           <Link
-            href="/projects"
+            href={introData.project}
             className="text-xs sm:text-base px-3 py-1.5 border rounded-full border-border flex items-center gap-2 bg-card text-card-foreground duration-500 hover:bg-primary hover:text-primary-foreground"
           >
             See Portfolio <span className="hidden sm:block">→</span>
