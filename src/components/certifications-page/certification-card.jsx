@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { FaExternalLinkAlt, FaGraduationCap } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function CertificationsCard({ cert }) {
     const [preview, setPreview] = useState(false);
@@ -21,9 +22,9 @@ export default function CertificationsCard({ cert }) {
                     <span onMouseEnter={() => setPreview(true)} onMouseLeave={() => setPreview(false)} onClick={() => handleZoom()} className="opacity-100 sm:opacity-0 cursor-zoom-in inline-flex items-center px-2 py-1 bg-primary text-primary-foreground rounded-full text-xs font-medium group-hover:opacity-100 transition-opacity duration-300">
                         <FaExternalLinkAlt className="mr-1" /> Preview
                     </span>
-                    <a href={cert.url} target="_blank" rel="noopener noreferrer" className="opacity-100 inline-flex items-center px-2 py-1 bg-primary text-primary-foreground rounded-full text-xs font-medium sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Link href={cert.url} target="_blank" rel="noopener noreferrer" className="opacity-100 inline-flex items-center px-2 py-1 bg-primary text-primary-foreground rounded-full text-xs font-medium sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <FaExternalLinkAlt className="mr-1" /> View
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className={`absolute w-full h-25 bg-muted items-center justify-center p-2 rounded-xl overflow-hidden ${preview ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'} transition-opacity duration-300`}>
@@ -31,8 +32,7 @@ export default function CertificationsCard({ cert }) {
                     <Image
                         src={cert.preview}
                         alt={cert.title + " preview"}
-                        layout="fill"
-                        objectFit="contain"
+                        fill
                         className={`transition-transform duration-300 ${zoom ? 'scale-150' : ''}`}
                     />
                 ) : (

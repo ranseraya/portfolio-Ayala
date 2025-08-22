@@ -21,7 +21,7 @@ export default function Page() {
     <main className="flex flex-col flex-1 gap-4 p-4 pt-0 max-h-[90vh]">
       <section
         aria-labelledby="about-heading"
-        className="h-[90vh] bg-muted/50 aspect-auto rounded-xl px-4 md:px-10 flex flex-col items-start w-full overflow-auto"
+        className="h-[90vh] bg-muted/50 aspect-auto rounded-xl px-4 pb-4 md:px-10 flex flex-col items-start w-full overflow-auto"
       >
         <div className="mt-10 flex flex-col items-center w-full">
           <h1 className="text-2xl sm:text-4xl orbitron text-primary">{mainTitle}</h1>

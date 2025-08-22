@@ -79,12 +79,12 @@ const data = {
     },
     {
       name: "CTF Playground",
-      url: "#",
+      url: "https://layactf.infy.uk/",
       icon: FlagIcon,
     },
     {
       name: "Discord Music Bot",
-      url: "#",
+      url: "https://github.com/ranseraya/Discord-MusicBot",
       icon: Music4Icon,
     },
   ],
