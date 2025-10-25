@@ -79,7 +79,7 @@ const data = {
     },
     {
       name: "CTF Playground",
-      url: "https://layactf.infy.uk/",
+      url: "https://layactf.rf.gd/",
       icon: FlagIcon,
     },
     {
