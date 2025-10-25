@@ -29,13 +29,16 @@ const spaceMono = Space_Mono({
 export const metadata = {
   title: "Portofolio Ayala",
   description: "Third Portofolio Website by Ayala",
+  verification: {
+    google: 'hhSa4pKngke6Sgi1WG2618A-Kntyfi6JF96Mnw705PQ', 
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning> 
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`} 
+        className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
