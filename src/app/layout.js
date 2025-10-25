@@ -26,11 +26,16 @@ const spaceMono = Space_Mono({
   variable: '--font-space-mono',
 });
 
+const FULL_URL = 'https://ranseraya.github.io/portfolio-Ayala/';
+
 export const metadata = {
   title: "Portofolio Ayala",
   description: "Third Portofolio Website by Ayala",
   verification: {
-    google: 'hhSa4pKngke6Sgi1WG2618A-Kntyfi6JF96Mnw705PQ', 
+    google: 'hhSa4pKngke6Sgi1WG2618A-Kntyfi6JF96Mnw705PQ',
+  },
+  alternates: {
+    canonical: FULL_URL,
   },
 };
 

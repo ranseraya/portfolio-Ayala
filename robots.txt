@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ranseraya.github.io/portfolio-Ayala/sitemap.xml
