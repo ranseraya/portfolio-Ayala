@@ -29,7 +29,7 @@ const spaceMono = Space_Mono({
 const FULL_URL = 'https://ranseraya.github.io/portfolio-Ayala/';
 
 export const metadata = {
-  title: "Portofolio Ayala",
+  title: "Portofolio Ayala Septama Rahanda",
   description: "Third Portofolio Website by Ayala",
   verification: {
     google: 'hhSa4pKngke6Sgi1WG2618A-Kntyfi6JF96Mnw705PQ',

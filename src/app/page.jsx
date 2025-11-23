@@ -50,7 +50,7 @@ export default function Page() {
               <h2 className="text-xl sm:text-2xl orbitron text-primary">
                {introData.firstname}{" "}
                 <span className="text-xl sm:text-2xl font-semibold hidden sm:inline text-foreground">
-                  {!introData.midname ? introData.midname : ''}{" "}
+                  {introData.midname ? introData.midname : ''}{" "}
                 </span>
                 {introData.lastname}
               </h2>
