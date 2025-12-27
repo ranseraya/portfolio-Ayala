@@ -40,8 +40,26 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayala Septama Rahanda",
+    "jobTitle": "Front-End Developer & Cybersecurity Enthusiast",
+    "url": "https://ranseraya.github.io/portfolio-Ayala/",
+    "sameAs": [
+      "https://github.com/ranseraya",
+      "https://linkedin.com/in/ranseraya"
+    ],
+    "knowsAbout": ["Web Development", "Cybersecurity", "React", "Next.js", "Information Security"]
+  };
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable} antialiased`}
       >

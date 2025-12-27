@@ -29,18 +29,18 @@ export function NavProjects({ projects }) {
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
             <SidebarGroupLabel>Projects</SidebarGroupLabel>
             <SidebarMenu>
-                {projects.map((item) => (
-                    <SidebarMenuItem 
+                {projects.map((item, index) => (
+                    <SidebarMenuItem
                         key={item.name}
                         className={isActive(item.url) ? 'bg-primary text-primary-foreground' : ''}
                     >
                         <SidebarMenuButton asChild>
-                            <Link href={item.url}> 
+                            <Link href={item.url}>
                                 {item.icon && <item.icon />}
                                 <span className={isActive(item.url) ? 'font-semibold' : ''}>{item.name}</span>
                             </Link>
                         </SidebarMenuButton>
-                        <DropdownMenu>
+                        {/* <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <SidebarMenuAction showOnHover>
                                     <MoreHorizontal />
@@ -65,13 +65,15 @@ export function NavProjects({ projects }) {
                                     <span>Delete Project</span>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
-                        </DropdownMenu>
+                        </DropdownMenu> */}
                     </SidebarMenuItem>
                 ))}
                 <SidebarMenuItem>
-                    <SidebarMenuButton className="text-sidebar-foreground/70">
+                    <SidebarMenuButton className="text-sidebar-foreground/70 cursor-pointer">
                         <MoreHorizontal className="text-sidebar-foreground/70" />
-                        <span>More</span>
+                        <Link href={"./projects"}>
+                            <span>More</span>
+                        </Link>
                     </SidebarMenuButton>
                 </SidebarMenuItem>
             </SidebarMenu>

@@ -12,7 +12,9 @@ import {
   Map,
   PieChart,
   Music4Icon,
-  FlagIcon
+  FlagIcon,
+  ShoppingBagIcon,
+  MessageSquareDashedIcon
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -23,7 +25,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import {NavProfile} from "./nav-profile"
+import { NavProfile } from "./nav-profile"
 const data = {
   user: {
     name: "Ayala Septama Rahanda",
@@ -73,19 +75,24 @@ const data = {
   ],
   projects: [
     {
-      name: "Georecomendation",
-      url: "#",
-      icon: Frame,
-    },
-    {
       name: "CTF Playground",
       url: "https://layactf.rf.gd/",
       icon: FlagIcon,
     },
     {
-      name: "Discord Music Bot",
-      url: "https://github.com/ranseraya/Discord-MusicBot",
-      icon: Music4Icon,
+      name: "Catalog E-commerce Website",
+      url: "https://landevinery.my.id",
+      icon: ShoppingBagIcon,
+    },
+    {
+      name: "Georecomendation",
+      url: "#",
+      icon: Map,
+    },
+    {
+      name: "Decentralized Chat App",
+      url: "#",
+      icon: MessageSquareDashedIcon,
     },
   ],
 }
@@ -96,7 +103,7 @@ export function NavigationSidebar({
   return (
     <Sidebar collapsible="icon" {...props} className={"z-10"}>
       <SidebarHeader>
-        <NavProfile user={data.user}/>
+        <NavProfile user={data.user} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
